@@ -57,20 +57,29 @@ console.log(friendName);
 var part =friendName.slice(2,6);
 console.log(part);
 
-*/
 
-var num=15;//declaration 
-while(num>=0){//condition statement
-  console.log(num);//print the values
- num--;//increment or decrements the value
+
+var num = 15; //declaration
+while (num >= 0) {
+  //condition statement
+  console.log(num); //print the values
+  num--; //increment or decrements the value
 }
 
 console.log("Next part :");
 
-var fullName=['MD','Razeen','Kibria','Ramim',];
-for(var i=0;i<fullName.length;i++)
-{
-  var allNames=fullName[i];
+var fullName = ["MD", "Razeen", "Kibria", "Ramim"];
+for (var i = 0; i < fullName.length; i++) {
+  var allNames = fullName[i];
   console.log(allNames);
 }
 
+*/
+
+var callMyLove()
+{
+  console.log("I love you ");
+  console.log("Thank's My love !");
+}
+
+callMyLove();
