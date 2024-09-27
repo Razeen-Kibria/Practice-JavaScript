@@ -74,12 +74,121 @@ for (var i = 0; i < fullName.length; i++) {
   console.log(allNames);
 }
 
-*/
 
-var callMyLove()
-{
-  console.log("I love you ");
-  console.log("Thank's My love !");
+
+ //WithOut Parameters:
+function sayLoveYou() {
+  console.log("I Love coding ");
+}
+sayLoveYou();
+
+ //Using Function Parameters :
+function doubleIt(num) {
+  var result = num * 2;
+  return result;
+}
+var first = doubleIt(100);
+var second = doubleIt(400);
+
+var total = first + second;
+
+console.log(total);
+
+// practice-2:
+
+function total(num1,num2){
+ var result=num1+num2;
+ return result;
+}
+var sum=total(22,30);
+console.log(sum);
+
+
+var student = { id: 193311003, phone: 18450, name: "MD.Razeen Kibria" };
+var student1 = { id: 193311002, phone: 98768, name: "MD.Rasedul Hasan" };
+
+student.phone = 98755;
+
+student.name = "MD.Fahim";
+
+console.log(student);
+
+
+function inchToFeet(inch) {
+  var feet = inch / 12;
+  return feet;
 }
 
-callMyLove();
+var result = inchToFeet(158);
+console.log(result);
+
+var result1 = inchToFeet(250);
+console.log(result1);
+
+
+
+var fullName='razeen';
+if(fullName.length>5)
+{
+  fullName='kibria';
+}
+console.log(fullName);
+
+
+// program to check leap year
+function checkLeapYear(year) {
+  //three conditions to find out the leap year
+  if ((0 == year % 4 && 0 != year % 100) || 0 == year % 400) {
+    console.log(year + " is a leap year");
+  } else {
+    console.log(year + " is not a leap year");
+  }
+}
+
+// take input
+const year = prompt("Enter a year:");
+
+checkLeapYear(year);
+
+
+//--Using For-loop Factorial Number-----
+
+function factorial(n) {
+  fact = 1;
+  for (var i = 1; i <= n; i++) {
+    fact = fact * i;
+  }
+  return fact;
+}
+var result = factorial(9);
+console.log(result);
+
+
+
+//-----Using While-loop Factorial Number------
+
+function factorial(n) {
+  var i = 1;
+  var fact = 1;
+  while (i <= n) {
+    fact = fact * i;
+    i++;
+  }
+  return fact;
+}
+var result = factorial(7);
+console.log(result);
+
+*/
+
+//-----Recursive factorial Using -----
+
+function factorial(n) {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}
+var result = factorial(0);
+console.log(result);
