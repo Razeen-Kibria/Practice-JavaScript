@@ -135,7 +135,8 @@ if(fullName.length>5)
 console.log(fullName);
 
 
-// program to check leap year
+// -----------------program to check leap year----------------
+
 function checkLeapYear(year) {
   //three conditions to find out the leap year
   if ((0 == year % 4 && 0 != year % 100) || 0 == year % 400) {
@@ -151,7 +152,7 @@ const year = prompt("Enter a year:");
 checkLeapYear(year);
 
 
-//--Using For-loop Factorial Number-----
+//---------------------Using For-loop Factorial Number-----------------------
 
 function factorial(n) {
   fact = 1;
@@ -165,7 +166,7 @@ console.log(result);
 
 
 
-//-----Using While-loop Factorial Number------
+//-------------------Using While-loop Factorial Number-------------------------------
 
 function factorial(n) {
   var i = 1;
@@ -179,9 +180,9 @@ function factorial(n) {
 var result = factorial(7);
 console.log(result);
 
-*/
 
-//-----Recursive factorial Using -----
+
+//------------------Recursive factorial Using -----------------------
 
 function factorial(n) {
   if (n == 0) {
@@ -192,3 +193,100 @@ function factorial(n) {
 }
 var result = factorial(0);
 console.log(result);
+
+//----------------Fibonacci using faction method--& Iterattive way used -----------------
+function fibonacci(n) {
+  var fibo = [0, 1];
+  for (var i = 2; i <= n; i++) {
+    fibo[i] = fibo[i - 1] + fibo[i - 2];
+  }
+  return fibo;
+}
+
+var result = fibonacci(12);
+console.log(result);
+
+
+
+//--------------Fibonacci using faction method--& Recursive way used ---------------
+
+function fibonacci(n) {
+  if (n == 0) {
+    return 0;
+  }
+  if (n == 1) {
+    return 1;
+  } else {
+    return fibonacci(n - 1) + fibonacci(n - 2);
+  }
+}
+
+var result = fibonacci(12);
+console.log(result);
+
+
+
+//----------------Prime Number Using Function method---------------------
+
+function isPrime(n) {
+  for (var i = 2; i < n; i++) {
+    if (n % i == 0) {
+      return "Not a prime number";
+    }
+  }
+  return "Prime Number";
+}
+
+var checkIsPrimeNumber = isPrime(3);
+console.log(checkIsPrimeNumber);
+
+
+
+//-------------Swap Practice---------------------------------------------------
+
+//part-01:
+
+var a = 9;
+var b = 7;
+console.log("before swap a = ", a, " b =", b);
+var temp = a;
+a = b;
+b = temp;
+console.log("After swap a = ", a, " b =", b);
+
+//part-02:
+
+var x = 10;
+var y = 6;
+console.log("before swap x = ", x, " y =", y);
+x = x + y;
+y = x - y; //10
+x = x - y; //16-10=6
+console.log("after swap x = ", x, " y =", y);
+
+//part-03:
+
+var p = 17;
+var q = 19;
+
+[p, q] = [q, p];
+
+console.log("after swap p = ", p, " q =", q);
+
+*/
+
+//------------------Math-Function Used-----------------------------
+
+var num = 2.45;
+var result1 = Math.floor(num);
+var result2 = Math.ceil(num);
+var result3 = Math.round(num);
+console.log(result3);
+
+//---------------Dice Game Coding-------------
+
+for (var i = 1; i < 10; i++) {
+  var dice = Math.random() * 6;
+  var finalCall = Math.round(dice);
+  console.log(finalCall);
+}
