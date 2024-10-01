@@ -273,7 +273,7 @@ var q = 19;
 
 console.log("after swap p = ", p, " q =", q);
 
-*/
+
 
 //------------------Math-Function Used-----------------------------
 
@@ -289,4 +289,37 @@ for (var i = 1; i < 10; i++) {
   var dice = Math.random() * 6;
   var finalCall = Math.round(dice);
   console.log(finalCall);
+}
+
+
+//---------------GetArraySum Method Used-------------------------
+
+function getArraySum(number) {
+  var sum = 0;
+  for (var i = 0; i < number.length; i++) {
+    var element = number[i];
+    sum = sum + element;
+  }
+  return sum;
+}
+var number = [45, 78, 89, 54];
+var result = getArraySum(number);
+console.log("Total Number of Value is  : ", result);
+
+var total = getArraySum([56, 78, 87, 90]);
+console.log("total Again : ", total);
+
+*/
+
+//--------------- Method Used-------------------------
+
+var number = [3, 6, 2, 7, 3, 2, 8, 1, 9, 11, 45];
+var uniqueName = [];
+
+for (var i = 0; i < number.length; i++) {
+  var element = number[i];
+  var index = uniqueName.indexOf(element);
+  if (index == -1) {
+    uniqueName.push(element);
+  }
 }
